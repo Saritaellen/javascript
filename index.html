@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade Prática JavaScript</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background-color: #fafafa;
+        }
+        #caixa {
+            border: 2px dashed #333;
+            padding: 40px;
+            display: inline-block;
+            background-color: white;
+            border-radius: 8px;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        #textoMensagem {
+            font-size: 20px;
+            margin-top: 25px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="caixa">
+        <h1>Universo da Tecnologia</h1>
+        
+        <!-- O BOTÃO DA ATIVIDADE -->
+        <button id="meuBotao">Ver Curiosidade</button>
+        
+        <!-- A MENSAGEM QUE VAI MUDAR -->
+        <p id="textoMensagem">Clique no botão acima para ver a mágica do JavaScript!</p>
+    </div>
+
+    <!-- O JAVASCRIPT DA ATIVIDADE -->
+    <script>
+        // 1. Seleciona o botão e o parágrafo da mensagem pelos IDs
+        const botao = document.getElementById("meuBotao");
+        const mensagem = document.getElementById("textoMensagem");
+
+        // 2. Cria a função exigida pelos critérios
+        function executarMudanca() {
+            // Altera o texto visível da página
+            mensagem.textContent = "🚀 Sucesso! O primeiro computador eletrônico (ENIAC) pesava mais de 27 toneladas!";
+            
+            // Altera elementos visuais para o professor ver a mudança clara
+            mensagem.style.color = "#ff4500"; // Deixa o texto laranja/vermelho
+            mensagem.style.fontWeight = "bold"; // Deixa o texto em negrito
+        }
+
+        // 3. Adiciona o evento de clique para rodar a função
+        botao.addEventListener("click", executarMudanca);
+    </script>
+
+</body>
+</html>
